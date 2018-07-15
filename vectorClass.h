@@ -1,4 +1,5 @@
-
+#ifndef VECTORCLASS_H
+#define VECTORCLASS_H
 
 class vectorClass{
 	private:
@@ -28,3 +29,4 @@ class vectorClass{
 	vectorClass();
 };
 
+#endif

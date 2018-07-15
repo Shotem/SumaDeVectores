@@ -11,34 +11,46 @@ void vectorClass::setMagnAndDir(){
 	//Ajustar a un ángulo conocido (común)
 	if (dXComponent > 0 && dYComponent >= 0) {
 		if (dir < 0)
-			dAngle =  90 + dir; else
+			dAngle =  90 + dir; 
+		else
 			dAngle = dir;
+		return;
 	}
 
-	if (dXComponent < 0 && dYComponent >= 0) {
+	if (dXComponent <= 0 && dYComponent > 0) {
 		if (dir < 0)
-			dAngle = 180 + dir; else
+			dAngle = 180 + dir; 
+		else
 			dAngle =  90 + dir;
+		return;
 	}
 
-	if (dXComponent < 0 && dYComponent < 0) {
+	if (dXComponent < 0 && dYComponent <= 0) {
 		if (dir < 0)
-			dAngle = 270 + dir; else
+			dAngle = 270 + dir; 
+		else
 			dAngle = 180 + dir;
+		return;
 	}
 
-	if (dXComponent<0 && dYComponent >= 0) {
+	if (dXComponent >= 0 && dYComponent < 0) {
 		if (dir < 0)
-			dAngle = 360 + dir; else
+			dAngle = 360 + dir; 
+		else
 			dAngle = 270 + dir;
+		return;
 	}
 }
+
+
 
 //A partir de la magnitud y la dirección del vector calcula los componentes
 void vectorClass::setComponents(){
 	dXComponent = dMagnitude * cos(dAngle * pi / 180);
 	dYComponent = dMagnitude * sin(dAngle * pi / 180);
 }
+
+
 
 //Constructor usado para agregar nuevos vectores en el for loop de main.cpp
 vectorClass::vectorClass(double m, double a){

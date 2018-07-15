@@ -1,20 +1,21 @@
 #include <iostream>
 #include <vector>
+#include <iostream>
 #include "vectorClass.h"
 
 int main() {
-	
-	int numVectores = 0;
-	double m = 0;
-	double a = 0;
-	double xComps = 0;
-	double yComps = 0;
-	std::vector<vectorClass> vectores;
-	vectorClass resultante;
+	//Definiciones de variables
+	double m = 0;									//Magnitud del vector
+	double a = 0;									//Direccion del vector
+	double xComps = 0;								//Componente x del vector
+	double yComps = 0;								//Componente y del vector
+	std::vector<vectorClass> vectores;				//Lista de vectores
+	int numVectores = 0;							//Número de vectores a sumar
+	vectorClass resultante;							//Vector Resultante
 	
 	std::cout << "¿Cuántos vectores desea sumar? ";
 	std::cin >> numVectores;
-	
+		
 	for (int i = 0; i < numVectores; i++){
 		//Pedir valores de cada vector
 		std::cout << "Escriba los valores del vector #" << i + 1 << " en el orden Magnitud [enter o espacio] Direccion" << std::endl;
@@ -39,7 +40,11 @@ int main() {
 	
 	//Mostrar resultado
 	std::cout << "Magnitud del vector resultante:  " <<		resultante.getMagnitude()		<< std::endl;
-	std::cout << "Direccion del vector resultante: " <<   resultante.getAngle() << "°"	 	<< std::endl;
-	
+	std::cout << "Direccion del vector resultante: " <<   resultante.getAngle() << "°";
+	if (resultante.getAngle() == 360){
+		std::cout << " (0°)";
+	}
+	std::cout << std::endl;
+		
 	return 0;
 }
