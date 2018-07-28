@@ -18,13 +18,13 @@ class vectorClass{
 	void setComponents();
 	void setMagnAndDir();
 	
-	//Getters Methods
+	//Getter Methods
 	double getAngle(){return dAngle;}
 	double getMagnitude(){return dMagnitude;}
 	double getXComponent(){return dXComponent;}
 	double getYComponent(){return dYComponent;}
 	
-	//Constructores
+	//Constructors
 	vectorClass(double, double);
 	vectorClass();
 };

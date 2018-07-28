@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <iostream>
+#include <iomanip>
 #include "vectorClass.h"
 
 int main() {
@@ -38,6 +39,16 @@ int main() {
 	//Asignar Magnitud y Direccion
 	resultante.setMagnAndDir();
 	
+	
+	/*
+	//////////////////////DEBUG!!//////////////////////
+	for (int j = 0; j < numVectores; j++){
+		std::cout << "Vector #" << j + 1 << ":" << std::endl;
+		std::cout << "X-component: " << std::setw(8) << vectores[j].getXComponent();
+		std::cout << "\tY-component " << std::setw(8) << vectores[j].getYComponent() << std::endl;
+	}
+	*/
+	
 	//Mostrar resultado
 	std::cout << "Magnitud del vector resultante:  " <<		resultante.getMagnitude()		<< std::endl;
 	std::cout << "Direccion del vector resultante: " <<   resultante.getAngle() << "°";
@@ -45,6 +56,6 @@ int main() {
 		std::cout << " (0°)";
 	}
 	std::cout << std::endl;
-		
+	std::cout << "X-component: "  << resultante.getXComponent() << "\tY-component " << resultante.getYComponent() << std::endl;
 	return 0;
 }
