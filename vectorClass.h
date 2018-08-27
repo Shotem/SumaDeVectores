@@ -21,8 +21,13 @@ class vectorClass{
 	//Getter Methods
 	double getAngle(){return dAngle;}
 	double getMagnitude(){return dMagnitude;}
-	double getXComponent(){return dXComponent;}
-	double getYComponent(){return dYComponent;}
+	double getXComponent(){
+		
+			return dXComponent;
+	}
+	double getYComponent(){
+			return dYComponent;
+	}
 	
 	//Constructors
 	vectorClass(double, double);

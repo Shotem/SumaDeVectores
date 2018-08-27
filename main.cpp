@@ -50,12 +50,13 @@ int main() {
 	*/
 	
 	//Mostrar resultado
-	std::cout << "Magnitud del vector resultante:  " <<		resultante.getMagnitude()		<< std::endl;
-	std::cout << "Direccion del vector resultante: " <<   resultante.getAngle() << "°";
+	std::cout << std::fixed << std::noshowpoint << std::setprecision(5);
+	std::cout << "Magnitud del vector resultante: " << resultante.getMagnitude() << std::endl;
+	std::cout << "Direccion del vector resultante: " << resultante.getAngle() << "°";
 	if (resultante.getAngle() == 360){
 		std::cout << " (0°)";
 	}
 	std::cout << std::endl;
-	std::cout << "X-component: "  << resultante.getXComponent() << "\tY-component " << resultante.getYComponent() << std::endl;
+	std::cout << "X-component: "  << resultante.getXComponent() << "\tY-component: " << resultante.getYComponent() << std::endl;
 	return 0;
 }

@@ -9,36 +9,23 @@ void vectorClass::setMagnAndDir(){
 	double dir = atan(dYComponent / dXComponent) * 180 / pi;
 	
 	//Ajustar a un ángulo conocido (común)
-	if (dXComponent > 0 && dYComponent >= 0) {
-		if (dir < 0)
-			dAngle =  90 + dir; 
-		else
-			dAngle = dir;
+	if (dXComponent >= 0 && dYComponent >= 0) {
+		dAngle = dir;
 		return;
 	}
 
-	if (dXComponent <= 0 && dYComponent > 0) {
-		if (dir < 0)
-			dAngle = 180 + dir; 
-		else
-			dAngle =  90 + dir;
+	if (dXComponent < 0 && dYComponent > 0) {
+		dAngle =  180 + dir;
 		return;
 	}
 
 	if (dXComponent < 0 && dYComponent <= 0) {
-		if (dir < 0)
-			dAngle = 270 + dir; 
-		else
-			dAngle = 180 + dir;
+		dAngle = 180 + dir;
 		return;
 	}
 
 	if (dXComponent >= 0 && dYComponent < 0) {
-		if (dir < 0)
-			dAngle = 360 + dir; 
-		else
-			dAngle = 270 + dir;
-		return;
+		dAngle = 360 + dir;
 	}
 }
 
