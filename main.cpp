@@ -50,7 +50,7 @@ int main() {
 	*/
 	
 	//Mostrar resultado
-	std::cout << std::fixed << std::noshowpoint << std::setprecision(5);
+	std::cout << std::fixed << std::setprecision(3);
 	std::cout << "Magnitud del vector resultante: " << resultante.getMagnitude() << std::endl;
 	std::cout << "Direccion del vector resultante: " << resultante.getAngle() << "°";
 	if (resultante.getAngle() == 360){
